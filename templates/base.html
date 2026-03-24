@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'myapp/create.css' %}">
+     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <title>{% block content %}{{tittle}}{% endblock%}</title>
+</head>
+<body>
+
+{% block heading %}{% endblock%}
+
+<div class="container"  >
+    
+<form class="form" method="post"   novalidate >
+        {% csrf_token %}
+    <div class="formrow">
+        <label>Department:</label>
+        <div class="input-box">
+        <select name="department" oninput="validate_department()" onblur="validate_department()">
+            <option value="">select department</option>
+            {% for dep in form.fields.department.queryset %}
+            <option value="{{ dep.id }}" {% if form.department.value == dep.id %} selected {% endif %}>{{dep.name}}</option>
+            {% endfor %}
+        </select>
+        
+        {% if form.department.errors %}<span id="department_error">{{form.department.errors}}</span>{% endif %}
+    </div></div>
+
+    <div class="formrow"> <label>Name:</label>
+        <div class="input-box">
+         <input type="text" name="name" value="{{form.name.value|default:''}}" oninput="validate_name()" onblur="validate_name()">
+         {% if form.name.errors %}<span id="name_error">{{form.name.errors}}</span>{% endif %}
+    </div></div>
+    <div class="formrow"><label>Phone number:</label>
+        <div class="input-box">
+       <input type="text" name="phone" value="{{form.phone.value|default:''}}" oninput="validate_phone()" onblur="validate_phone()">
+         {% if form.phone.errors %} <span id="phone_error"> {{form.phone.errors}}</span>{% endif %}
+    </div></div>
+    <div class="formrow"><label>Email:</label>
+        <div class="input-box"> 
+       <input type="text" name="email" value="{{form.email.value|default:''}}" oninput="validate_email()" onblur="validate_email()">
+       {% if form.email.errors %} <span id="email_error">{{form.email.errors}}</span>{% endif %}
+    </div></div>
+       <div class="formrow"><label>Place:</label>
+        <div class="input-box">
+        <input type="text" name="place" value="{{form.place.value|default:''}}" oninput="validate_place()" onblur="validate_place()">
+        {% if form.place.errors %}<span id="place_error">{{form.place.errors}}</span>{% endif %}
+    </div></div>
+       <div class="formrow"><label>gender:</label>
+        <div class="input-box">
+            {{form.gender}}
+        
+       
+       {% if form.gender.errors %} <span id="gender_error">{{form.gender.errors}} </span>{% endif %}
+    </div></div>
+       <div style="display:flex;justify-content: center;">
+   {% block button_text %}   {% endblock %}</div>
+
+</form>
+</div>
+<script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+ 
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+ 
+   
+
+</body>
+</html>
+
+
+

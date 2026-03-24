@@ -1,0 +1,172 @@
+[
+  {
+    "model": "myapp.department",
+    "pk": 1,
+    "fields": {"name": "HR"}
+  },
+  {
+    "model": "myapp.department",
+    "pk": 2,
+    "fields": {"name": "IT"}
+  },
+  {
+    "model": "myapp.department",
+    "pk": 3,
+    "fields": {"name": "Finance"}
+  },
+  {
+    "model": "myapp.department",
+    "pk": 4,
+    "fields": {"name": "Marketing"}
+  },
+  {
+    "model": "myapp.department",
+    "pk": 5,
+    "fields": {"name": "Sales"}
+  },
+  {
+    "model": "myapp.department",
+    "pk": 6,
+    "fields": {"name": "Support"}
+  },
+  {
+    "model": "myapp.department",
+    "pk": 7,
+    "fields": {"name": "Logistics"}
+  },
+  {
+    "model": "myapp.department",
+    "pk": 8,
+    "fields": {"name": "Research"}
+  },
+  {
+    "model": "myapp.department",
+    "pk": 9,
+    "fields": {"name": "Operations"}
+  },
+  {
+    "model": "myapp.department",
+    "pk": 10,
+    "fields": {"name": "Legal"}
+  },
+  {
+    "model": "myapp.employee",
+    "pk": 1,
+    "fields": {
+      "name": "AliceJohnson",
+      "email": "alice.johnson@example.com",
+      "phone": "9876543210",
+      "gender": "Female",
+      "department": 1,
+      "place": "Kochi"
+    }
+  },
+  {
+    "model": "myapp.employee",
+    "pk": 2,
+    "fields": {
+      "name": "BobSmith",
+      "email": "bob.smith@example.com",
+      "phone": "9876543211",
+      "gender": "Male",
+      "department": 2,
+      "place": "Kollam"
+    }
+  },
+  {
+    "model": "myapp.employee",
+    "pk": 3,
+    "fields": {
+      "name": "CarolDavis",
+      "email": "carol.davis@example.com",
+      "phone": "9876543212",
+      "gender": "Female",
+      "department": 3,
+      "place": "Trivandrum"
+    }
+  },
+  {
+    "model": "myapp.employee",
+    "pk": 4,
+    "fields": {
+      "name": "DavidLee",
+      "email": "david.lee@example.com",
+      "phone": "9876543213",
+      "gender": "Male",
+      "department": 4,
+      "place": "Ernakulam"
+    }
+  },
+  {
+    "model": "myapp.employee",
+    "pk": 5,
+    "fields": {
+      "name": "EvaMartinez",
+      "email": "eva.martinez@example.com",
+      "phone": "9876543214",
+      "gender": "Female",
+      "department": 5,
+      "place": "Thrissur"
+    }
+  },
+  {
+    "model": "myapp.employee",
+    "pk": 6,
+    "fields": {
+      "name": "FrankWilson",
+      "email": "frank.wilson@example.com",
+      "phone": "9876543215",
+      "gender": "Male",
+      "department": 6,
+      "place": "Palakkad"
+    }
+  },
+  {
+    "model": "myapp.employee",
+    "pk": 7,
+    "fields": {
+      "name": "GraceKim",
+      "email": "grace.kim@example.com",
+      "phone": "9876543216",
+      "gender": "Female",
+      "department": 7,
+      "place": "Malappuram"
+    }
+  },
+  {
+    "model": "myapp.employee",
+    "pk": 8,
+    "fields": {
+      "name": "HenryClark",
+      "email": "henry.clark@example.com",
+      "phone": "9876543217",
+      "gender": "Male",
+      "department": 8,
+      "place": "Kozhikode"
+    }
+  },
+  {
+    "model": "myapp.employee",
+    "pk": 9,
+    "fields": {
+      "name": "IsabellaScott",
+      "email": "isabella.scott@example.com",
+      "phone": "9876543218",
+      "gender": "Female",
+      "department": 9,
+      "place": "Kannur"
+    }
+  },
+  {
+    "model": "myapp.employee",
+    "pk": 10,
+    "fields": {
+      "name": "JackTurner",
+      "email": "jack.turner@example.com",
+      "phone": "9876543219",
+      "gender": "Male",
+      "department": 10,
+      "place": "Kottayam"
+    }
+  }
+]
